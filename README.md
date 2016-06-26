@@ -11,7 +11,9 @@ Requirements
 >npm install
 
 "express": "4.14.0",
+
 "log4js": "0.6.37",
+
 "request": "2.72.0"
 
 
@@ -31,6 +33,9 @@ How to use
 
 On the search bar
 > write the year 
+
 > click on search icon
+
 > use next and previous to show more movies.
+
 > click on any movie on the list to show the details.
