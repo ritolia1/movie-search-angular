@@ -1,0 +1,18 @@
+.card {
+	margin: 40px 0px 0px 0px;
+}
+
+.card-parameters {
+    margin: 15px 20% 0px 20%;
+}
+
+.page-button {
+	margin: 20px 0px 0px 0px;
+}
+
+img{
+    width:80%;
+    outline: 5px solid black;
+    height:auto;
+    margin: 0px 0px 15px 0px;
+}

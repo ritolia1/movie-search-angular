@@ -1,0 +1,27 @@
+.search-bar {
+    margin: 100px auto 0px auto;
+    width: 50%;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #9d9d9d;
+    color: white;
+    margin:0px 30% 0px 30%;
+}
+
+.closebtn {
+    margin: 0px 0px 0px 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
