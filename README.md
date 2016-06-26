@@ -1,6 +1,7 @@
 # Movie-search
 ---------------
 This project will list the movie based on year and show their details on click.
+On clicking movie poster on detail page will show you the trailer of the movie.
 Listing is done using http://api.themoviedb.org website.
 Details is being given by the combination of both http://api.themoviedb.org and http://www.omdbapi.com.
 This Movie-Searh is implemented using nodejs, express, and angularjs.
@@ -39,3 +40,5 @@ On the search bar
 > use next and previous to show more movies.
 
 > click on any movie on the list to show the details.
+
+> click on movie poster to watch the trailer of the movie.

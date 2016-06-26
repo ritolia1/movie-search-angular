@@ -22,7 +22,7 @@ router.get('/list/:year/:page', function(req, res) {
   });
 });
 
-//T list details of specific movie based on movie name.
+//To list details of specific movie based on movie name.
 router.get('/specific/:name', function(req, res) {
   request('http://api.themoviedb.org/3/search/movie?query='+req.params.name+'&api_key='+config.api_key, function(error, response, body){
   	if(!error) {
@@ -44,6 +44,20 @@ router.get('/imdb/:name',function(req,res){
     }
     else {
      logger.error('Error while making the request from imdb api of movie: '+req.params.name);
+   }
+ });
+});
+
+
+//List video details key for specific movie.
+router.get('/video/:id',function(req,res){
+  request(' http://api.themoviedb.org/3/movie/'+req.params.id+'/videos?api_key='+config.api_key,function(error,response,body){
+    if(!error){
+      logger.info('Sucessfully returned the video detail key of: '+req.params.id);
+      res.json(body);
+    }
+    else {
+     logger.error('Error while making the request of movie id: '+req.params.id);
    }
  });
 });

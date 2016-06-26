@@ -25,7 +25,7 @@
   <!-- Angularjs module started-->
   <div ng-app='detailApp' ng-controller='detailCtrl'>
     <!-- To display the movie image --> 
-    <div class='image-bar'>
+    <div class='image-bar' ng-click="onclick()">
       <img src='http://image.tmdb.org/t/p/w500/{{obj.results[0].backdrop_path}}'>
     </div>
     <!--movie image ended --> 
