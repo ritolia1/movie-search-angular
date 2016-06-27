@@ -37,7 +37,8 @@
 					url : link
 				}).then(function(response) {
 					var output=JSON.parse(response.data);
-					if ( (output.status_code == 11 ) || (output.results.length ==0) ) {
+					console.log(output);
+					if ( (output.status_code == 11 ) ||(output.results==null) ||(output.results.length ==0) ) {
 						$scope.buttonVisibility='true';
 						$scope.alertVisibility='true';
 						 $timeout(function() {

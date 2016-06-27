@@ -9,9 +9,17 @@
 			action();
 		}
 
+		$scope.enterKey = function(){
+			pagecount=1;
+			action();
+		}
+
 		function action() {
 			var item = $scope.MovieName;
-			if(item != null && item !='') {
+			var patt = new RegExp("^[0-9]{4}$");
+    		var res = patt.test(item);
+			if(item != null && item !='' && res) {
+				console.log("hi");
 				window.open('list.html?'+item+'/'+pagecount,'_self');
 			}
 			else {

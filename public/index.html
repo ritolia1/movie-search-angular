@@ -27,7 +27,7 @@
 		<!-- Search Bar-->
 		<div class='search-bar'>
 			<div class='input-group'>
-				<input type='text' class='form-control' placeholder='Enter the year (YYYY)'  ng-model='MovieName' >
+				<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-keyup="$event.keyCode == 13 && enterKey()">
 				<span class='input-group-btn'>
 					<button class='btn btn-default' type='button' ng-click='check()'>
 						<span class='glyphicon glyphicon-search' aria-hidden='true'>
@@ -40,7 +40,7 @@
 
 		<!-- Alert Box started-->
 		<div class='alert alert-danger error-box' ng-show='alertVisibility' >
-  			 Enter the Search Item in year.
+  			 Enter the Valid Search Item.
 		</div>
 		<!-- Alert Box ended-->
 
