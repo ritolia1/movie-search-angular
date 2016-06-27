@@ -17,7 +17,7 @@
 	<nav class='navbar navbar-inverse navbar-fixed-top'>
 		<div class='container'>
 			<div class='navbar-header'>
-				<a class='navbar-brand' href='#'>Movie Search Engine</a>
+				<a class='navbar-brand' href='index.html'>Movie Search Engine</a>
 			</div>
 		</div>
 	</nav>
@@ -27,7 +27,7 @@
 	<div ng-app='listApp' ng-controller='listCtrl'>
 
 		<!-- listing of card started-->
-		<div class='card' style='margin-top:150px'>
+		<div class='card' style='margin-top:150px' ng-hide="value">
 			<div class='row card-parameters' ng-repeat='val in obj.results' ng-click='onclick()'>
 				<div style='width=100%'>	
 					<div class='col-sm-3'>
@@ -68,7 +68,7 @@
 		<!-- Listing of card ended-->
 
 		<!-- Buttons to toggle page-->
-		<div class='page-button'>
+		<div class='page-button' ng-hide="buttonVisibility">
 			<nav>
 				<ul class='pager'>
 					<li><a href='#' ng-click='decrese()'>Previous</a></li>
@@ -77,6 +77,12 @@
 			</nav>
 		</div>
 		<!-- Buttons ended-->
+
+		<!-- Alert Box started-->
+		<div class='alert alert-danger error-box' ng-show='alertVisibility' >
+  			 Not a valid Year. Redirecting to Home Page.
+		</div>
+		<!-- Alert Box ended-->
 
 	</div>
 	<!-- Angularjs Module ended-->

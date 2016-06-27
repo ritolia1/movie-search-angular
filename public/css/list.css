@@ -16,3 +16,14 @@ img{
     height:auto;
     margin: 0px 0px 15px 0px;
 }
+
+.error-box {
+    margin-top: 150px;
+    background-color: #222;
+    color: #9d9d9d;
+    font-size: 18px;
+    width: 32%;
+    padding-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}

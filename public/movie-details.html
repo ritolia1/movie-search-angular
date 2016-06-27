@@ -17,16 +17,18 @@
   <nav class='navbar navbar-inverse navbar-fixed-top'>
     <div class='container'>
       <div class='navbar-header'>
-        <a class='navbar-brand' href='#'>Movie Search Engine</a>
+        <a class='navbar-brand' href='index.html'>Movie Search Engine</a>
       </div>
     </div>
   </nav>
 
   <!-- Angularjs module started-->
   <div ng-app='detailApp' ng-controller='detailCtrl'>
+    
     <!-- To display the movie image --> 
-    <div class='image-bar' ng-click="onclick()">
-      <img src='http://image.tmdb.org/t/p/w500/{{obj.results[0].backdrop_path}}'>
+    <div class='image-bar' ng-click='onclick()' ng-init='val=1' ng-mouseover='val=0' ng-mouseout='val=1'>
+      <img ng-if='val==1'  ng-src='{{imgsrc}}'>
+      <img ng-if='val==0'  ng-src='../images/youtube.png'>
     </div>
     <!--movie image ended --> 
 

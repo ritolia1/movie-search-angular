@@ -16,7 +16,7 @@
 	<nav class='navbar navbar-inverse navbar-fixed-top'>
 		<div class='container'>
 			<div class='navbar-header'>
-				<a class='navbar-brand' href='#'>Movie Search Engine</a>
+				<a class='navbar-brand' href='index.html'>Movie Search Engine</a>
 			</div>
 		</div>
 	</nav>
@@ -27,7 +27,7 @@
 		<!-- Search Bar-->
 		<div class='search-bar'>
 			<div class='input-group'>
-				<input type='text' class='form-control' placeholder='Search'  ng-model='MovieName'>
+				<input type='text' class='form-control' placeholder='Enter the year (YYYY)'  ng-model='MovieName' >
 				<span class='input-group-btn'>
 					<button class='btn btn-default' type='button' ng-click='check()'>
 						<span class='glyphicon glyphicon-search' aria-hidden='true'>
@@ -37,6 +37,13 @@
 			</div>
 		</div>
 		<!-- Search Bar ended-->
+
+		<!-- Alert Box started-->
+		<div class='alert alert-danger error-box' ng-show='alertVisibility' >
+  			 Enter the Search Item in year.
+		</div>
+		<!-- Alert Box ended-->
+
 	</div>
 	<!-- Angularjs Module ended-->
 

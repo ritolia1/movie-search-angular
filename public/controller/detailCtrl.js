@@ -14,6 +14,7 @@
 					url : link
 				}).then(function(response) {
 					$scope.obj=(JSON.parse(response.data));
+					$scope.imgsrc='http://image.tmdb.org/t/p/w500/'+ $scope.obj.results[0].backdrop_path;
 				});   
 			}
 			if (movie != '') {
@@ -45,7 +46,7 @@
 							objkey=JSON.parse(response.data);
 							window.open('https://www.youtube.com/embed/'+objkey.results[0].key+'?vq=highres','_self');
 						})
-					}   
+					}
 				})
 			}
 		}
