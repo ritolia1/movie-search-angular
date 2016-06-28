@@ -30,7 +30,7 @@
 		}
 
 		function action() {
-			var link = 'http://127.0.0.1:8090/movie/list/'+year+'/'+pagecount;
+			var link = '/movie/list/'+year+'/'+pagecount;
 			if (year != '') {
 				$http({
 					method : 'get',

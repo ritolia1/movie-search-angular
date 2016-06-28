@@ -6,8 +6,8 @@
 		action();
 
 		function action() {
-			var link = 'http://127.0.0.1:8090/movie/specific/'+movie;
-			var imdbLink= 'http://127.0.0.1:8090/movie/imdb/'+movie;
+			var link = '/movie/specific/'+movie;
+			var imdbLink= '/movie/imdb/'+movie;
 			if (movie != '') {
 				$http({
 					method : 'get',
@@ -28,7 +28,7 @@
 		}
 
 		$scope.onclick =function(){
-			var link = 'http://127.0.0.1:8090/movie/specific/'+movie;
+			var link = '/movie/specific/'+movie;
 			if (movie != '') {
 				$http({
 					method : 'get',
@@ -36,7 +36,7 @@
 				}).then(function(response) {
 					var detail=(JSON.parse(response.data));
 					var id=detail.results[0].id;
-					var videolink='http://127.0.0.1:8090/movie/video/'+id;
+					var videolink='/movie/video/'+id;
 
 					if(id!=''){
 						$http({
