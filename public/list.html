@@ -6,6 +6,7 @@
 	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 	<link rel='stylesheet' href='css/list.css'>
 	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	
 	
 	<title> Welcome to Movie Search Engine</title>
@@ -80,12 +81,13 @@
 
 		<!-- Alert Box started-->
 		<div class='alert alert-danger error-box' ng-show='alertVisibility' >
-  			 Not a valid Year for movies or Page. Redirecting to Home Page.
+			<center>{{errorMessage}}</center>
 		</div>
 		<!-- Alert Box ended-->
 
 	</div>
 	<!-- Angularjs Module ended-->
+	
 	<script src='module/app.js'></script>
 	<script src='controller/listCtrl.js'></script>
 </body>

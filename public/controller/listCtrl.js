@@ -41,9 +41,13 @@
 					if ( (output.status_code == 11 ) ||(output.results==null) ||(output.results.length ==0) ) {
 						$scope.buttonVisibility='true';
 						$scope.alertVisibility='true';
+						$scope.errorMessage="Not a valid Year for movies or Page."; 
 						 $timeout(function() {
-      						window.open('../index.html','_self');	
-      					 }, 3000);
+						 	$scope.errorMessage="Redirecting to home page.";	
+      					 }, 2000);
+      					 $timeout(function() {
+						 	window.open('../index.html','_self');	
+      					 }, 4000);	 
 					}
 					else {
 						$scope.obj=output;
