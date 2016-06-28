@@ -1,0 +1,20 @@
+.search-bar {
+    margin: 130px auto 0px auto;
+    width: 50%;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #9d9d9d;
+    color: white;
+    margin:0px 30% 0px 30%;
+}
+
+.error-box {
+    margin: 50px auto 0px auto;
+    background-color: #222;
+    color: #9d9d9d;
+    font-size: 18px;
+    width: 21%;
+    padding: 3px 0px 3px 5px;
+}

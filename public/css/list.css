@@ -1,0 +1,27 @@
+.card {
+	margin: 40px 0px 0px 0px;
+}
+
+.card-parameters {
+    margin: 15px 20% 0px 20%;
+}
+
+.page-button {
+	margin: 20px 0px 0px 0px;
+}
+
+img{
+    width:80%;
+    outline: 5px solid black;
+    height:auto;
+    margin: 0px 0px 15px 0px;
+}
+
+.error-box {
+    margin: 200px auto 0px auto;
+    background-color: #222;
+    color: #9d9d9d;
+    font-size: 18px;
+    width: 27%;
+    padding: 3px 0px 3px 0px;
+}
