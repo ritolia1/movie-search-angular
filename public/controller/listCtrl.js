@@ -1,27 +1,10 @@
 /*
 	Calls the api to list the movies of a specific year.
 	*/
-
-	list.factory('apiService', function($http) {
-		var apiService = {
-			serviceCall: function() {
-				var query = window.location.search.substring(1);
-				var vars = query.split('/');
-				pagecount=vars[1];
-				year=vars[0];
-				var promise = $http.get('/movie/list/'+year+'/'+pagecount).then(function (response) {
-					var output=JSON.parse(response.data);
-					return output;
-				});
-				return promise;
-			}
-		};
-		return apiService;
-	});
-
 	var pagecount=0;
-	list.controller('listCtrl', function($scope,$timeout,apiService) {
-		apiService.serviceCall().then(function(output) {
+	list.controller('listCtrl', function($scope,$timeout,listFactory) {
+		listFactory.factoryCall().then(function(output) {
+			console.log(output);
 			if ( (output.status_code == 11 ) ||(output.results==null) ||(output.results.length ==0) ) {
 				$scope.buttonVisibility='true';
 				$scope.alertVisibility='true';
