@@ -17,6 +17,6 @@
 			var id=$scope.obj.results[0].id;
 			detailFactory.factoryCall('video',id).then(function(objkey) {
 				window.open('https://www.youtube.com/embed/'+objkey.results[0].key+'?vq=highres','_self');
-			});
+			});		
 		}
 	});

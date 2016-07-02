@@ -37,5 +37,4 @@
 		$scope.onclick =function(){
 			window.open('movie-details.html?'+this.val.original_title,'_self');
 		}
-	}
-	); 
+	}); 

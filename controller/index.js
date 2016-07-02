@@ -13,7 +13,6 @@ router.use('/movie/', require('./route'))
 
 router.get('/', function(req, res) {
 	logger.info('Sucessfully returned the home page');
-	//res.send("Welcome to movie search engine");
 	res.sendFile(appDir+'/public/index.html');
 });
 
