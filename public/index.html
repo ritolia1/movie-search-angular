@@ -7,7 +7,6 @@
 	<link rel='stylesheet' href='css/style.css'>
 	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
 	
-	
 	<title> Welcome to Movie Search Engine</title>
 </head>
 
@@ -27,7 +26,8 @@
 		<!-- Search Bar-->
 		<div class='search-bar'>
 			<div class='input-group'>
-				<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-keyup="$event.keyCode == 13 && enterKey()">
+				<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-keyup="$event.keyCode == 13 && check()">
+
 				<span class='input-group-btn'>
 					<button class='btn btn-default' type='button' ng-click='check()'>
 						<span class='glyphicon glyphicon-search' aria-hidden='true'>
