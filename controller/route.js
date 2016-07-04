@@ -10,7 +10,6 @@ var logger = log4js.getLogger('route.js');
 
 //To list all movies of a particular year based on page no.
 router.get('/list/:year/:page', function(req, res) {
-  console.log(req.params.year);
   request('http://api.themoviedb.org/3/discover/movie?primary_release_year='+req.params.year+'&page='+req.params.page+'&api_key='+config.api_key, function(error, response, body){
   	if(!error) {
       logger.info('Sucessfully returned the list of movies of year: '+req.params.year+' and page number:'+req.params.page);
