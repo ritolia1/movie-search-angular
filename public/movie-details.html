@@ -1,125 +1,89 @@
-<!DOCTYPE html>
-<html>
+  
+<!-- movie image started -->
+<div class='image-bar'>
+  <img src="{{imgsrc}}"  onmouseout="this.src='{{imgsrc}}'" onmouseover="this.src='../images/youtube.png'" ng-click='onclick()'/>
+</div>
+<!--movie image ended --> 
 
-<head>
-
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='css/movie-detail.css'>
-  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
-
-  <title> 
-    Welcome to Movie Search Engine
-  </title>
-</head>
-<body>
-
-  <nav class='navbar navbar-inverse navbar-fixed-top'>
-    <div class='container'>
-      <div class='navbar-header'>
-        <a class='navbar-brand' href='index.html'>Movie Search Engine</a>
-      </div>
+<!-- To display the movie details-->
+<div class='text-area'>
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Title
     </div>
-  </nav>
-
-  <!-- Angularjs module started-->
-  <div ng-app='detailApp' ng-controller='detailCtrl'>
-    
-    <!-- To display the movie image --> 
-    <div class='image-bar' ng-click='onclick()' ng-init='val=1' ng-mouseover='val=0' ng-mouseout='val=1'>
-      <img ng-if='val==1'  ng-src='{{imgsrc}}'>
-      <img ng-if='val==0'  ng-src='../images/youtube.png'>
+    <div class='panel-body'>
+      {{obj.results[0].original_title}}
     </div>
-    <!--movie image ended --> 
-
-    <!-- To display the movie details-->
-    <div class='text-area'>
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Title
-        </div>
-        <div class='panel-body'>
-          {{obj.results[0].original_title}}
-        </div>
-      </div>
-
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Popularity
-        </div>
-        <div class='panel-body'>
-          {{obj.results[0].popularity}}
-        </div>
-      </div>
-
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Overview
-        </div>
-        <div class='panel-body'>
-          {{ obj.results[0].overview}}
-        </div>
-      </div>
-
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Release Date
-        </div>
-        <div class='panel-body'>
-          {{obj.results[0].release_date}}
-        </div>
-      </div>   
-
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Genre
-        </div>
-        <div class='panel-body'>
-          {{imdbobj.Genre}}
-        </div>
-      </div>
-
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Actors
-        </div>
-        <div class='panel-body'>
-          {{imdbobj.Actors}}
-        </div>
-      </div>
-
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          ImdbRating
-        </div>
-        <div class='panel-body'>
-          {{imdbobj.imdbRating}}
-        </div>
-      </div>
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          ImdbVotes
-        </div>
-        <div class='panel-body'>
-          {{imdbobj.imdbVotes}}
-        </div>
-      </div>
-      <div class='panel panel-primary spacing'>
-        <div class='panel-heading'>
-          Language
-        </div>
-        <div class='panel-body'>
-          {{imdbobj.Language}}
-        </div>
-      </div>
-    </div>
-    <!-- Movie Deatil ended-->
-
   </div>
-  <!-- Angularjs module ended-->
 
-  <script src='module/app.js'></script>
-  <script src='factory/detailFactory.js'></script>
-  <script src='controller/detailCtrl.js'></script>
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Popularity
+    </div>
+    <div class='panel-body'>
+      {{obj.results[0].popularity}}
+    </div>
+  </div>
 
-</body>
-</html>
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Overview
+    </div>
+    <div class='panel-body'>
+      {{ obj.results[0].overview}}
+    </div>
+  </div>
+
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Release Date
+    </div>
+    <div class='panel-body'>
+      {{obj.results[0].release_date}}
+    </div>
+  </div>   
+
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Genre
+    </div>
+    <div class='panel-body'>
+      {{imdbobj.Genre}}
+    </div>
+  </div>
+
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Actors
+    </div>
+    <div class='panel-body'>
+      {{imdbobj.Actors}}
+    </div>
+  </div>
+
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      ImdbRating
+    </div>
+    <div class='panel-body'>
+      {{imdbobj.imdbRating}}
+    </div>
+  </div>
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      ImdbVotes
+    </div>
+    <div class='panel-body'>
+      {{imdbobj.imdbVotes}}
+    </div>
+  </div>
+  <div class='panel panel-primary spacing'>
+    <div class='panel-heading'>
+      Language
+    </div>
+    <div class='panel-body'>
+      {{imdbobj.Language}}
+    </div>
+  </div>
+</div>
+<!-- Movie Deatil ended-->

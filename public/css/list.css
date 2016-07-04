@@ -1,5 +1,5 @@
 .card {
-	margin: 40px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
 }
 
 .card-parameters {
@@ -7,7 +7,7 @@
 }
 
 .page-button {
-	margin: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 img{
@@ -18,7 +18,7 @@ img{
 }
 
 .error-box {
-    margin: 200px auto 0px auto;
+    margin: 100px auto 0px auto;
     background-color: #222;
     color: #9d9d9d;
     font-size: 18px;

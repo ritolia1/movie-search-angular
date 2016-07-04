@@ -1,40 +1,49 @@
 /*
 	Calls the api to list the movies of a specific year.
 	*/
-	var pagecount=0;
-	list.controller('listCtrl', function($scope,$timeout,listFactory) {
-		listFactory.factoryCall().then(function(output) {
-			console.log(output);
+
+	sampleApp.controller('listCtrl', function($scope,$timeout,$routeParams,$location,listFactory) {
+		year = $routeParams.year;
+		page = $routeParams.pagecount;
+		listFactory.factoryCall(year,page).then(function(output) {
+			output=JSON.parse(output);
 			if ( (output.status_code == 11 ) ||(output.results==null) ||(output.results.length ==0) ) {
 				$scope.buttonVisibility='true';
 				$scope.alertVisibility='true';
 				$scope.errorMessage="Not a valid Year for movies or Page."; 
 				$timeout(function() {
-					$scope.errorMessage="Redirecting to home page.";	
-				}, 2000);
-				$timeout(function() {
-					window.open('../index.html','_self');	
-				}, 4000);	 
+					$location.path('/index');
+				}, 2000);	 
 			}
 			else {
 				$scope.obj=output;
 			}
 		}); 
 
+		//Decrease the page count
 		$scope.decrese =function(){
+			pagecount = $routeParams.pagecount;
 			pagecount--;
 			if (pagecount<=0) {
 				pagecount=1;
 			};
-			window.open('list.html?'+year+'/'+pagecount,'_self');
+			$location.path('/list/'+ year+'/'+pagecount);
 		}
 
+		//Increase the page count
 		$scope.increse = function(){
+			pagecount = $routeParams.pagecount;
 			pagecount++;
-			window.open('list.html?'+year+'/'+pagecount,'_self');
+			$location.path('/list/'+ year+'/'+pagecount);
 		} 
 
+		//Begin new search.
+		$scope.check = function () {
+			$location.path('/list/'+ $scope.MovieName+'/1');
+		}
+
+		//Check the detail of the movie.
 		$scope.onclick =function(){
-			window.open('movie-details.html?'+this.val.original_title,'_self');
+			$location.path('/detail/'+this.val.original_title);
 		}
 	}); 
