@@ -4,10 +4,15 @@
 
 .card-parameters {
     margin: 15px 20% 0px 20%;
+    cursor: pointer;
 }
 
 .page-button {
     margin: 20px 0px 0px 0px;
+}
+
+.button-width {
+    width: 7%;
 }
 
 img{
@@ -24,4 +29,13 @@ img{
     font-size: 18px;
     width: 27%;
     padding: 3px 0px 3px 0px;
+}
+
+.caption-width {
+    width: 40%;
+}
+
+
+.caption-response-width {
+    width: 50%;
 }
