@@ -25,3 +25,12 @@ img{
     width: 27%;
     padding: 3px 0px 3px 0px;
 }
+
+.caption-width {
+    width: 40%;
+}
+
+
+.caption-response-width {
+    width: 50%;
+}
