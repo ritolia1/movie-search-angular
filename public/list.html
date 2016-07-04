@@ -1,94 +1,71 @@
-<!DOCTYPE html>
-<html>
+<!--Search Box started-->
+<div class='search-bar'>
+	<div class='input-group'>
+		<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-enter="check()">
 
-<head>
-	
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-	<link rel='stylesheet' href='css/list.css'>
-	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
-
-	<title> Welcome to Movie Search Engine</title>
-</head>
-
-<body>
-	
-	<!--Header-->
-	<nav class='navbar navbar-inverse navbar-fixed-top'>
-		<div class='container'>
-			<div class='navbar-header'>
-				<a class='navbar-brand' href='index.html'>Movie Search Engine</a>
-			</div>
-		</div>
-	</nav>
-	<!--Header ended-->
-
-	<!-- AngularJs module started-->
-	<div ng-app='listApp' ng-controller='listCtrl'>
-
-		<!-- listing of card started-->
-		<div class='card' style='margin-top:150px' ng-hide="value">
-			<div class='row card-parameters' ng-repeat='val in obj.results' ng-click='onclick()'>
-				<div style='width=100%'>	
-					<div class='col-sm-3'>
-						<center>
-							<img src='http://image.tmdb.org/t/p/w500/{{val.poster_path}}' >
-						</center>
-					</div>
-					<div class='col-sm-9'>
-						<table class='table table-striped table-responsive'>
-							<tbody>
-								<tr>
-									<td>Original Title:</td>
-									<td>{{val.original_title}}</td>
-								</tr>
-
-								<tr>
-									<td>Original_language</td>
-									<td>{{val.original_language}}</td>
-								</tr>
-								<tr>
-									<td>Popularity:</td>
-									<td>{{val.popularity}}</td>
-								</tr>
-								<tr>
-									<td>Vote Count:</td>
-									<td>{{val.vote_count}}</td>
-								</tr>
-								<tr>
-									<td>Vote Average:</td>
-									<td>{{val.vote_average}}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Listing of card ended-->
-
-		<!-- Buttons to toggle page-->
-		<div class='page-button' ng-hide="buttonVisibility">
-			<nav>
-				<ul class='pager'>
-					<li><a href='#' ng-click='decrese()'>Previous</a></li>
-					<li><a href='#' ng-click='increse()'>Next</a></li>
-				</ul>
-			</nav>
-		</div>
-		<!-- Buttons ended-->
-
-		<!-- Alert Box started-->
-		<div class='alert alert-danger error-box' ng-show='alertVisibility' >
-			<center>{{errorMessage}}</center>
-		</div>
-		<!-- Alert Box ended-->
-
+		<span class='input-group-btn'>
+			<button class='btn btn-default' type='button' ng-click='check()' >
+				<span class='glyphicon glyphicon-search' aria-hidden='true'>
+				</span>
+			</button>
+		</span>
 	</div>
-	<!-- Angularjs Module ended-->
-	
-	<script src='module/app.js'></script>
-	<script src='factory/listFactory.js'></script>
-	<script src='controller/listCtrl.js'></script>
+</div>
+<!--Search Box ended-->
 
-</body>
-</html>
+<!-- Listing of Card Started-->
+<div class='card' style='margin-top:80px' ng-hide="value">
+	<div class='row card-parameters' ng-repeat='val in obj.results' ng-click='onclick()'>
+		<div style='width=100%'>	
+			<div class='col-sm-3'>
+				<center>
+					<img src='http://image.tmdb.org/t/p/w500/{{val.poster_path}}' >
+				</center>
+			</div>
+			<div class='col-sm-9'>
+				<table class='table table-striped table-responsive'>
+					<tbody>
+						<tr>
+							<td>Original Title:</td>
+							<td>{{val.original_title}}</td>
+						</tr>
+						<tr>
+							<td>Original_language</td>
+							<td>{{val.original_language}}</td>
+						</tr>
+						<tr>
+							<td>Popularity:</td>
+							<td>{{val.popularity}}</td>
+						</tr>
+						<tr>
+							<td>Vote Count:</td>
+							<td>{{val.vote_count}}</td>
+						</tr>
+						<tr>
+							<td>Vote Average:</td>
+							<td>{{val.vote_average}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Listing of card ended-->
+
+<!--Buttons Started-->
+<div class='page-button' ng-hide="buttonVisibility">
+	<nav>
+		<ul class='pager'>
+			<li><a  ng-click='decrese()'>Previous</a></li>
+			<li><a  ng-click='increse()'>Next</a></li>
+		</ul>
+	</nav>
+</div>
+<!-- Buttons ended-->
+
+<!--ALert Box Started -->
+<div class='alert alert-danger error-box' ng-show='alertVisibility' >
+	<center>{{errorMessage}}</center>
+</div>
+<!--ALert Box Ended -->

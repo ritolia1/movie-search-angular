@@ -1,53 +1,19 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-	<link rel='stylesheet' href='css/style.css'>
-	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
-	
-	<title> Welcome to Movie Search Engine</title>
-</head>
-
-<body>	
-	<!--Header-->
-	<nav class='navbar navbar-inverse navbar-fixed-top'>
-		<div class='container'>
-			<div class='navbar-header'>
-				<a class='navbar-brand' href='index.html'>Movie Search Engine</a>
-			</div>
-		</div>
-	</nav>
-	<!--Header ended-->
-
-	<!-- Angularjs Module Started-->
-	<div ng-app='indexApp' ng-controller='indexCtrl'>
-		<!-- Search Bar-->
-		<div class='search-bar'>
-			<div class='input-group'>
-				<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-keyup="$event.keyCode == 13 && check()">
-
-				<span class='input-group-btn'>
-					<button class='btn btn-default' type='button' ng-click='check()'>
-						<span class='glyphicon glyphicon-search' aria-hidden='true'>
-						</span>
-					</button>
+<!--Search Box Started-->
+<div class='search-bar'>
+	<div class='input-group'>
+		<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-enter="check()">
+		<span class='input-group-btn'>
+			<button class='btn btn-default' type='button' ng-click='check()'>
+				<span class='glyphicon glyphicon-search' aria-hidden='true'>
 				</span>
-			</div>
-		</div>
-		<!-- Search Bar ended-->
-
-		<!-- Alert Box started-->
-		<div class='alert alert-danger error-box' ng-show='alertVisibility' >
-  			<center>{{errorMessage}}</center>
-		</div>
-		<!-- Alert Box ended-->
-
+			</button>
+		</span>
 	</div>
-	<!-- Angularjs Module ended-->
+</div> 
+<!--Search Box ended-->
 
-	<script src='module/app.js'></script>
-	<script src='controller/indexCtrl.js'></script>
-</body>
-</html>
+<!-- Alert bpx started-->
+<div class='alert alert-danger error-box' ng-show='alertVisibility' >
+	<center>{{errorMessage}}</center>
+</div>
+<!-- Alert box ended-->

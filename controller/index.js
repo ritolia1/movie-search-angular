@@ -13,7 +13,7 @@ router.use('/movie/', require('./route'))
 
 router.get('/', function(req, res) {
 	logger.info('Sucessfully returned the home page');
-	res.sendFile(appDir+'/public/index.html');
+	res.sendFile(appDir+'/public/sample.html');
 });
 
 module.exports = router
