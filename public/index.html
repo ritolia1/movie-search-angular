@@ -1,7 +1,7 @@
 <!--Search Box Started-->
 <div class='search-bar'>
 	<div class='input-group'>
-		<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName'>
+		<input type='text' class='form-control' placeholder='Enter the year (YYYY)' ng-model='MovieName' ng-enter="check()">
 		<span class='input-group-btn'>
 			<button class='btn btn-default' type='button' ng-click='check()'>
 				<span class='glyphicon glyphicon-search' aria-hidden='true'>
