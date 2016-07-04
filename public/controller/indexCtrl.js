@@ -1,7 +1,6 @@
 /*
 	calls the list.html page with movie name and page number in the uri.
 	*/
-
 	sampleApp.controller('indexCtrl', function($scope,$http,$timeout,$location) {
 		
 		$scope.check = function () {

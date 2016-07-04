@@ -1,7 +1,6 @@
 /*
 	factory method used by detailCtrl to get movie details.
 	*/
-	
 	sampleApp.factory('detailFactory', function($http) {
 		var detailFactory = {
 			factoryCall: function(link,movie) {

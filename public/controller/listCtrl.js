@@ -1,7 +1,6 @@
 /*
 	Calls the api to list the movies of a specific year.
 	*/
-
 	sampleApp.controller('listCtrl', function($scope,$timeout,$routeParams,$location,listFactory) {
 		year = $routeParams.year;
 		page = $routeParams.pagecount;
