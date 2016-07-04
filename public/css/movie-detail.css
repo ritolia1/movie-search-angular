@@ -1,6 +1,7 @@
 .image-bar {
 	margin: 80px 25% 0px 25%;
 	width: 50%;
+	cursor: pointer;
 }
 
 .text-area {

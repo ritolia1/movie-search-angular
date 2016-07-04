@@ -4,6 +4,7 @@
 
 .card-parameters {
     margin: 15px 20% 0px 20%;
+    cursor: pointer;
 }
 
 .page-button {
