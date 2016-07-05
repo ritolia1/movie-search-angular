@@ -30,6 +30,7 @@ On the web browser open
 
 Online hosted
 > http://ec2-54-187-119-76.us-west-2.compute.amazonaws.com:8090/
+
 How to use
 -----------------
 
