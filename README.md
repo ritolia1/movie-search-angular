@@ -26,9 +26,10 @@ In the root directory,
 
 On the web browser open
 
-> http://ec2-54-187-119-76.us-west-2.compute.amazonaws.com:8090/ 
+> 127.0.0.1:8090/ 
 
-
+Online hosted
+> http://ec2-54-187-119-76.us-west-2.compute.amazonaws.com:8090/
 How to use
 -----------------
 
