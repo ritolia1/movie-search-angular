@@ -26,7 +26,7 @@ In the root directory,
 
 On the web browser open
 
-> 127.0.0.1:8090/ 
+> http://ec2-54-187-119-76.us-west-2.compute.amazonaws.com:8090/ 
 
 
 How to use
